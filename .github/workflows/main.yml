@@ -61,4 +61,4 @@ jobs:
       - name: Install project
         run: yarn
       - name: Build the project
-        run: yarn build:nest
+        run: yarn build
