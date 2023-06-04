@@ -14,8 +14,8 @@ export class CharacterService {
 
   getOutsideRequest = async (url: string) => {
     try {
-      const response = await axios.get(url); // Ваш асинхронный запрос (например, с помощью fetch)
-      const data = await response.data; // Обработка ответа (парсинг JSON и т.д.)
+      const response = await axios.get(url);
+      const data = await response.data;
       return data;
     } catch (error) {
       console.error(error);
