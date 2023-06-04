@@ -35,11 +35,7 @@ interface IColumn {
 export const PAGE_SIZE = 10;
 
 const TableText: FC<any> = ({ value, onClick }) => {
-  return (
-    <div className={classes.table_container__row} onClick={onClick}>
-      {value}
-    </div>
-  );
+  return <div onClick={onClick}>{value}</div>;
 };
 
 const MainTable: FC<IMainTable> = ({ data, totalPaginationSize }) => {

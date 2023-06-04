@@ -8,28 +8,26 @@ body {
   background-color: #00CC47 !important;
   opacity: 1 !important;
 }
-
+.ant-table {
+  background-color:  $second-main-background-color !important;
+  color: $main-color !important;
+}
 .ant-table-cell {
   padding: 5px 10px !important;
   height: 10px !important;
 }
 
 // Custom table settings
-/* цвет текста заголовка таблицы */
+/* table header text color */
 .ant-table-thead > tr > th {
-  color: #6C6F80 !important;
-  background-color: #FFFFFF !important; /* измените значение на нужный вам цвет */
+  color: $main-color !important;
+  background-color:  $second-main-background-color !important; /* измените значение на нужный вам цвет */
 }
 
 .ant-table-wrapper .ant-table-cell:nth-child(6),
 .ant-table-cell:nth-child(8),
 .ant-table-cell:nth-child(10) {
-  background-color: #EBF8F9 !important;
-}
-
-/* цвет фона заголовка таблицы */
-.ant-table-thead > tr > th {
-  background-color: #1890ff; /* измените значение на нужный вам цвет */
+  background-color:  $second-main-background-color !important;
 }
 
 /*
@@ -96,30 +94,17 @@ fix handleStyle
   animation: flickerAnimation 1s infinite;
 }
 
-/* Стили фона скролл-бара */
+/* Scroll bar background styles */
 ::-webkit-scrollbar-track {
   background-color: $main-background-scroll;
   border-radius: 6px;
 }
-
-.ant-table-cell {
-  background-color: $second-main-background-color !important;
+/* Pagination background styles */
+.ant-pagination .ant-pagination-item a{
+  color: $main_color;
+  background-color: $main_pagination_container_background;
 }
-
-:where(.css-dev-only-do-not-override-ed5zg0).ant-table-wrapper .ant-table-container table > thead > tr:first-child > * {
-  background-color: $second-main-background-color!important;
-}
-
-:where(.css-dev-only-do-not-override-ed5zg0).ant-table-wrapper .ant-table {
-  background-color: transparent !important;
-  color: $main-color;
-  font-weight: 400;
-}
-
-:where(.css-dev-only-do-not-override-ed5zg0).ant-pagination .ant-pagination-item a {
-  color: $main-color;
-}
-:where(.css-dev-only-do-not-override-ed5zg0).ant-pagination .ant-pagination-item-active{
-  background-color: $second-main-background-color !important;
-  border-color:  $main-color;
+.ant-pagination .ant-pagination-item-active{
+  background-color: $main_pagination_container_background;
+  border-color: $main_pagination_color;
 }
