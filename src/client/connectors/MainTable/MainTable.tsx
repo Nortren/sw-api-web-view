@@ -2,7 +2,7 @@ import React, { ChangeEvent, FC, useEffect, useState } from 'react';
 
 import classes from './MainTable.module.scss';
 import { getPersonList } from '../../api/api';
-import { Input, Pagination, Table } from 'antd';
+import { Input, Pagination } from 'antd';
 
 import Link from 'next/link';
 import { useSelectors } from '../../hooks/useSelectors';
@@ -10,6 +10,7 @@ import { useActions } from '../../hooks/useAction';
 
 import { useDebounce } from '../../hooks/useDebounce';
 import { StarWarsCharacter } from '../../types/data';
+import Table from '../../components/Table/Table';
 
 interface IMainTable {
   data: StarWarsCharacter[];
