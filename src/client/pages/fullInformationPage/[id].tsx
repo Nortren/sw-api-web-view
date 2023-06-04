@@ -7,12 +7,12 @@ import { StarWarsCharacter } from '../../types/data';
 
 interface IPageProps {
   personData: StarWarsCharacter | null;
+  clientRender: string | string[] | boolean;
   errorMessage: boolean;
-  clientRender: boolean;
-  id: string;
+  id: string | string[];
 }
 
-interface ssrParams {
+interface ISSRParams {
   props: IPageProps;
 }
 
@@ -34,8 +34,8 @@ const Index: NextPage<IPageProps> = ({
 
 export const getServerSideProps: GetServerSideProps = async ({
   query,
-}: any): Promise<ssrParams> => {
-  const id = query.id;
+}): Promise<ISSRParams> => {
+  const id = query.id as string;
   const clientRender = query.client_render || false;
 
   let personData = null;

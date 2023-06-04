@@ -43,7 +43,7 @@ const Button: FC<IButton> = ({
   const buttonClasses = classNames(className, {
     [classes.button_container_success]: status === 'success',
     [classes.button_container_warning]: status === 'warning',
-    [classes.button_container_danger]: status === 'danger',
+    [classes.button_container_error]: status === 'danger',
     [classes.button_container_link]: status === 'link',
     [classes.button_container]: !type,
     [classes.text_button_container]: type === 'text',
