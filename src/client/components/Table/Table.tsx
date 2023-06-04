@@ -4,6 +4,8 @@ import { Table as AntdTable } from 'antd';
 import { ColumnsType } from 'antd/es/table';
 import { TablePaginationConfig } from 'antd/es/table/interface';
 
+export type SizeType = 'small' | 'middle' | 'large' | undefined;
+
 interface TableProps {
   columns: ColumnsType<any>;
   dataSource: any[];
@@ -11,6 +13,8 @@ interface TableProps {
   className?: string;
   loading?: boolean;
   pagination?: false | TablePaginationConfig;
+  rowKey?: string;
+  size?: SizeType;
 }
 
 const Table = ({
@@ -19,6 +23,8 @@ const Table = ({
   className,
   pagination,
   loading,
+  rowKey,
+  size,
 }: TableProps) => {
   return (
     <AntdTable
@@ -28,6 +34,8 @@ const Table = ({
       columns={columns}
       dataSource={dataSource}
       pagination={pagination}
+      rowKey={rowKey}
+      size={size}
     />
   );
 };
