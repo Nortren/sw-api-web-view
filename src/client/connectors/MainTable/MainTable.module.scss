@@ -1,0 +1,22 @@
+.main_container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 65px;
+}
+.table_container{
+    margin: 20px 0;
+}
+.pagination_container{
+    background-color: $second-main-background-color;
+    border-radius: 8px;
+    color: $main-color;
+
+}
+.search_container{
+    background-color: $second-main-background-color;
+    color: $main-color;
+    border: 0;
+}
+.search_container::placeholder {
+    color: $main-color;
+}

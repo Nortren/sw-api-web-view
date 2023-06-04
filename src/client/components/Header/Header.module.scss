@@ -1,0 +1,40 @@
+@mixin text_style {
+  line-height: 21px;
+  letter-spacing: 0.5em;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  background: $header-background-color;
+  color: $header-color;
+  height: 200px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 5em;
+  padding-inline: 0;
+  font-family: 'Museo Sans';
+
+  &__title {
+    @include text_style;
+    font-size: 2em;
+    font-weight: 800;
+  }
+
+  &__subtitle {
+    @include text_style;
+    font-size: 1em;
+    margin-left: 10px;
+    font-weight: 400;
+  }
+
+  &__top{
+    display: flex;
+
+  }
+
+
+}

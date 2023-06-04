@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  background-color: $main-background-color;
+}
+
+// Changing the standard color of the switch
+.ant-switch-checked {
+  background-color: #00CC47 !important;
+  opacity: 1 !important;
+}
+
+.ant-table-cell {
+  padding: 5px 10px !important;
+  height: 10px !important;
+}
+
+// Custom table settings
+/* цвет текста заголовка таблицы */
+.ant-table-thead > tr > th {
+  color: #6C6F80 !important;
+  background-color: #FFFFFF !important; /* измените значение на нужный вам цвет */
+}
+
+.ant-table-wrapper .ant-table-cell:nth-child(6),
+.ant-table-cell:nth-child(8),
+.ant-table-cell:nth-child(10) {
+  background-color: #EBF8F9 !important;
+}
+
+/* цвет фона заголовка таблицы */
+.ant-table-thead > tr > th {
+  background-color: #1890ff; /* измените значение на нужный вам цвет */
+}
+
+/*
+fix handleStyle
+*/
+.ant-slider .ant-slider-handle::before {
+  display: none
+}
+
+.ant-slider .ant-slider-handle::after {
+  display: none
+}
+
+.ant-slider .ant-slider-dot-active {
+  display: none;
+}
+
+.ant-slider-horizontal .ant-slider-dot {
+  display: none;
+}
+
+/**Button style */
+.ant-btn-default:not(:disabled):hover {
+  color: #9e9e9e;
+  border-color: #9e9e9e;
+}
+
+.ant-select-selector {
+  background: $main-background-color !important;
+  border: 1px solid $second-background-color !important;
+  color: $main-color !important;
+}
+
+.ant-select-selection-placeholder {
+  color: $main-color !important;
+}
+
+.ant-select-arrow {
+  color: $main-color !important;
+}
+
+.ant-select-item-option-content {
+  color: $main-color !important;
+}
+
+.ant-select-dropdown .ant-select-item-option-selected {
+  background: $menu_container_color !important;
+}
+
+.ant-table-tbody > tr {
+  margin-bottom: 50px;
+  padding: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to top, #0e0ed3, #9cced3);
+  border-radius: 6px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+  animation: flickerAnimation 1s infinite;
+}
+
+/* Стили фона скролл-бара */
+::-webkit-scrollbar-track {
+  background-color: $main-background-scroll;
+  border-radius: 6px;
+}
+
+.ant-table-cell {
+  background-color: $second-main-background-color !important;
+}
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-table-wrapper .ant-table-container table > thead > tr:first-child > * {
+  background-color: $second-main-background-color!important;
+}
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-table-wrapper .ant-table {
+  background-color: transparent !important;
+  color: $main-color;
+  font-weight: 400;
+}
+
+:where(.css-dev-only-do-not-override-ed5zg0).ant-pagination .ant-pagination-item a {
+  color: $main-color;
+}
+:where(.css-dev-only-do-not-override-ed5zg0).ant-pagination .ant-pagination-item-active{
+  background-color: $second-main-background-color !important;
+  border-color:  $main-color;
+}

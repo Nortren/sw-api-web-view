@@ -1,0 +1,21 @@
+.breadcrumb_container {
+
+  &__button{
+    background-color: $main-background-color;
+    border: 1px solid $second-background-color;
+    padding: 0;
+  }
+  &__text{
+    color: $main-color;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: 'Museo Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: capitalize;
+    padding-right: 10px;
+  }
+}

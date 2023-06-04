@@ -1,0 +1,39 @@
+.button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #222222;
+  border-radius: 5px;
+  color: $button-color;
+  box-shadow: 1px 1px 5px $button-shadow;
+  font-family: 'Museo Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+
+  &_success{
+    background-color: $button-success-color;
+    border-color: $button-success-color;
+  }
+  &_warning{
+    background-color: $button-warning-color;
+    border-color: $button-warning-color;
+  }
+  &_error{
+    background-color: $button-danger-color;
+    border-color: $button-danger-color;
+  }
+
+  &_link{
+    background-color: $button-link-color;
+    border-color: $button-link-color;
+  }
+
+}
+.text_button_disable_container {
+  background: $button-main-color__disable !important;
+  color: $button-color__disable !important;
+}

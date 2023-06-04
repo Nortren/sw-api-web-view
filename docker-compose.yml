@@ -1,0 +1,13 @@
+version: '3.0'
+
+services:
+  main:
+    container_name: sw-api-web-view
+    build:
+      context: .
+      args:
+        PORT: 8080
+    ports:
+      - 8080:8080
+    command: yarn start:prod
+    restart: always

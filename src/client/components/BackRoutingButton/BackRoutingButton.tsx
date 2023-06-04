@@ -1,0 +1,37 @@
+import React, { FC } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import classes from './BackRoutingButton.module.scss';
+import Button from '../Button/Button';
+import usePathHistory from '../../helpers/routerHelpers/routerHelpers';
+import { LeftOutlined } from '@ant-design/icons';
+
+const BackRoutingButton: FC = () => {
+  const pathname = usePathname();
+
+  const routing = useRouter();
+  const pathList = usePathHistory(pathname);
+  const previousPath = pathList.previous;
+  const backPathName = previousPath ? previousPath : 'Back';
+
+  const goBack = () => {
+    routing.back();
+  };
+
+  return (
+    <div>
+      {pathList.current && (
+        <Button
+          type={'text'}
+          onClick={goBack}
+          className={classes.breadcrumb_container__button}
+        >
+          <div className={classes.breadcrumb_container__text}>
+            <LeftOutlined /> {backPathName}
+          </div>
+        </Button>
+      )}
+    </div>
+  );
+};
+
+export default BackRoutingButton;

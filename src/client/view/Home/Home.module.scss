@@ -1,0 +1,45 @@
+@mixin container_text_style {
+  font-family: 'Museo Sans';
+  font-style: normal;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+
+  &_title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Museo Sans';
+    width: 100%;
+
+    &__main_header {
+
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 50px;
+    }
+
+    &__description {
+      font-family: 'Museo Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: #222222;
+    }
+
+  }
+}
+
+.home_container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
